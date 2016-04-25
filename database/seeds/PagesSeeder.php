@@ -24,7 +24,7 @@ class PagesSeeder extends Seeder
 
             DB::table('menuitems')->insert([
                 'menutitle' => $faker->sentence($nbWords = 1, $variableNbWords = true),
-                'url' => 'http://a15.dev/pages/' . $id,
+                'url' => 'http://a15.dev/page/' . $id,
             ]);
         }
     }
