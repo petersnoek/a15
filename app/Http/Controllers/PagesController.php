@@ -12,11 +12,7 @@ class PagesController extends Controller
     public function detail($id)
     {
         $page = Page::findOrFail($id);
-        $title = $page->title;
-        $content = $page->content;
-
-
-        return view('page/detail')->with(['title'=>$title, 'content' => $content]);
+        return view('page/detail')->with('page', $page);
     }
 
 }
